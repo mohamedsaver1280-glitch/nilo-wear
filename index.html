@@ -1,0 +1,1818 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="description"
+        content="NILO — Egyptian streetwear built on the Nile. Heavyweight fabric, considered cuts, limited drops.">
+    <meta property="og:title" content="NILO — Streetwear">
+    <meta property="og:description" content="Egyptian streetwear built on the Nile.">
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23050505'/%3E%3Cpolyline points='15,72 35,42 50,62 70,25 85,50' fill='none' stroke='%232DD4BF' stroke-width='9' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Cairo:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <title>NILO — Streetwear</title>
+    <script>try { if (localStorage.getItem("nilo_lang") === "en") { document.documentElement.lang = "en"; document.documentElement.dir = "ltr" } } catch (e) { }</script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: env(safe-area-inset-top, 0px)
+        }
+
+        :root {
+            --ink: #050505;
+            --panel: #0d0d0d;
+            --teal: #0E7C8C;
+            --aqua: #2DD4BF;
+            --off: #F2F1EC;
+            --mute: #b0b0b0;
+            --mute2: #9a9a9a;
+            box-sizing: border-box;
+            padding-top: env(safe-area-inset-top, 0px);
+            padding-bottom: env(safe-area-inset-bottom, 0px)
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html,
+        body {
+            min-height: 100%;
+            margin: 0
+        }
+
+        body {
+            background: var(--ink);
+            color: var(--off);
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            overflow-x: hidden
+        }
+
+        .wrap {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px
+        }
+
+        .gloss {
+            background: radial-gradient(ellipse 900px 500px at 50% -10%, rgba(45, 212, 191, .10), transparent 60%), linear-gradient(180deg, rgba(255, 255, 255, .05), transparent 30%), var(--ink)
+        }
+
+        header {
+            position: sticky;
+            top: env(safe-area-inset-top, 0px);
+            z-index: 50;
+            background: rgba(5, 5, 5, .85);
+            backdrop-filter: blur(6px);
+            border-bottom: 1px solid rgba(255, 255, 255, .08)
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 24px;
+            max-width: 1100px;
+            margin: 0 auto
+        }
+
+        .brand {
+            font-weight: 600;
+            font-size: 20px;
+            letter-spacing: 5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            direction: ltr
+        }
+
+        .brand-icon {
+            width: 26px;
+            height: 26px
+        }
+
+        .brand-icon svg {
+            width: 100%;
+            height: 100%
+        }
+
+        .navlinks {
+            display: flex;
+            gap: 28px;
+            font-size: 12px;
+            letter-spacing: 2px
+        }
+
+        .navlinks a {
+            color: #ddd;
+            text-decoration: none
+        }
+
+        .navlinks a:hover {
+            color: var(--aqua)
+        }
+
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--off);
+            font-size: 20px;
+            cursor: pointer;
+            padding: 4px
+        }
+
+        @media(max-width:640px) {
+            .navlinks {
+                display: none
+            }
+
+            .hamburger {
+                display: block
+            }
+        }
+
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            background: #0a0a0a;
+            border-bottom: 1px solid rgba(255, 255, 255, .1);
+            padding: 6px 24px 18px
+        }
+
+        .mobile-menu.open {
+            display: flex
+        }
+
+        .mobile-menu a {
+            color: var(--off);
+            text-decoration: none;
+            font-size: 13px;
+            letter-spacing: 2px;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, .06)
+        }
+
+        .cart-btn {
+            background: transparent;
+            color: var(--off);
+            border: 1px solid rgba(255, 255, 255, .3);
+            padding: 8px 16px;
+            font-size: 12px;
+            letter-spacing: 1px;
+            cursor: pointer
+        }
+
+        .cart-btn:hover {
+            border-color: var(--aqua);
+            color: var(--aqua)
+        }
+
+        button:focus-visible,
+        a:focus-visible,
+        select:focus-visible {
+            outline: 2px solid var(--aqua);
+            outline-offset: 3px
+        }
+
+        .hero {
+            min-height: 92vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            padding: 60px 24px 70px;
+            background: linear-gradient(180deg, rgba(5, 5, 5, .35) 0%, rgba(5, 5, 5, .55) 40%, rgba(5, 5, 5, .9) 75%, var(--ink) 100%), url('images/hero.jpg') center center/cover no-repeat
+        }
+
+        .hero>* {
+            position: relative;
+            z-index: 1
+        }
+
+        .eyebrow {
+            font-size: 12px;
+            letter-spacing: 6px;
+            color: var(--aqua);
+            margin-bottom: 22px
+        }
+
+        .hero h1 {
+            font-size: clamp(64px, 16vw, 160px);
+            font-weight: 400;
+            letter-spacing: 6px;
+            margin: 0;
+            font-family: 'Anton', 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(180deg, #fff, #b9b9b9 60%, #6f6f6f);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent
+        }
+
+        .hero p {
+            max-width: 44ch;
+            font-size: 15px;
+            line-height: 1.8;
+            color: var(--mute);
+            margin: 22px 0 0;
+            letter-spacing: .5px
+        }
+
+        .hero-cta {
+            margin-top: 30px;
+            display: inline-block;
+            background: var(--teal);
+            color: #fff;
+            text-decoration: none;
+            padding: 14px 30px;
+            font-size: 12px;
+            letter-spacing: 2px
+        }
+
+        .hero-cta:hover {
+            background: var(--aqua);
+            color: #000
+        }
+
+        .hero-bg {
+            position: absolute !important;
+            inset: 0;
+            opacity: .06;
+            pointer-events: none
+        }
+
+        .hero-bg svg {
+            width: 140%;
+            height: 140%;
+            position: absolute;
+            top: -20%;
+            left: -20%
+        }
+
+        .watermark {
+            position: absolute !important;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'Anton', 'Helvetica Neue', sans-serif;
+            font-size: min(38vw, 420px);
+            color: #fff;
+            opacity: .025;
+            white-space: nowrap;
+            letter-spacing: 10px;
+            pointer-events: none;
+            direction: ltr
+        }
+
+        .countdown {
+            display: none;
+            gap: 22px;
+            margin-top: 34px;
+            direction: ltr
+        }
+
+        .countdown.on {
+            display: flex
+        }
+
+        .cd-unit {
+            display: flex;
+            flex-direction: column;
+            align-items: center
+        }
+
+        .cd-num {
+            font-family: 'Anton', 'Helvetica Neue', sans-serif;
+            font-size: 34px;
+            color: var(--aqua);
+            line-height: 1
+        }
+
+        .cd-label {
+            font-size: 10px;
+            letter-spacing: 2px;
+            color: var(--mute2);
+            margin-top: 6px
+        }
+
+        .faq-wrap {
+            max-width: 620px;
+            margin: 0 auto
+        }
+
+        .faq-item {
+            border-bottom: 1px solid rgba(255, 255, 255, .1)
+        }
+
+        .faq-q {
+            width: 100%;
+            text-align: start;
+            background: none;
+            border: none;
+            color: var(--off);
+            padding: 18px 4px;
+            font-size: 14px;
+            letter-spacing: .5px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: inherit
+        }
+
+        .faq-q .plus {
+            color: var(--aqua);
+            font-size: 18px;
+            transition: transform .2s
+        }
+
+        .faq-item.open .faq-q .plus {
+            transform: rotate(45deg)
+        }
+
+        .faq-a {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height .3s ease
+        }
+
+        .faq-item.open .faq-a {
+            max-height: 240px
+        }
+
+        .faq-a p {
+            color: var(--mute);
+            font-size: 13.5px;
+            line-height: 1.7;
+            padding: 0 4px 18px;
+            margin: 0
+        }
+
+        .section-head {
+            margin: 0 0 48px;
+            text-align: center
+        }
+
+        .section-head .eyebrow {
+            margin-bottom: 14px
+        }
+
+        .section-head h2 {
+            font-size: 38px;
+            font-weight: 400;
+            margin: 0;
+            letter-spacing: 2px;
+            font-family: 'Anton', 'Helvetica Neue', sans-serif
+        }
+
+        section {
+            padding: 100px 0
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1px;
+            background: rgba(255, 255, 255, .08)
+        }
+
+        .card {
+            background: var(--panel);
+            display: flex;
+            flex-direction: column;
+            transition: background .2s
+        }
+
+        .card:hover {
+            background: #141414
+        }
+
+        .card-art {
+            aspect-ratio: 2/3;
+            position: relative;
+            overflow: hidden;
+            background: #fff
+        }
+
+        .card-art img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform .5s ease
+        }
+
+        .card:hover .card-art img {
+            transform: scale(1.04)
+        }
+
+        .card-body {
+            padding: 20px 22px 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            flex: 1
+        }
+
+        .card-body h3 {
+            margin: 0;
+            font-size: 15px;
+            font-weight: 500;
+            letter-spacing: 1px
+        }
+
+        .card-body .meta {
+            font-size: 11px;
+            letter-spacing: 1px;
+            color: var(--mute2)
+        }
+
+        .card-body .price {
+            font-weight: 400;
+            font-size: 15px;
+            color: var(--off)
+        }
+
+        .add-btn {
+            margin-top: auto;
+            background: transparent;
+            color: var(--off);
+            border: 1px solid rgba(255, 255, 255, .3);
+            padding: 12px;
+            cursor: pointer;
+            letter-spacing: 2px;
+            font-size: 11px
+        }
+
+        .add-btn:hover {
+            border-color: var(--aqua);
+            color: var(--aqua)
+        }
+
+        .buy-panel {
+            max-width: 640px;
+            margin: 0 auto;
+            text-align: center
+        }
+
+        .buy-panel p {
+            color: var(--mute);
+            line-height: 1.8;
+            font-size: 15px;
+            margin-bottom: 34px
+        }
+
+        .buy-options {
+            display: flex;
+            flex-direction: column;
+            gap: 1px;
+            background: rgba(255, 255, 255, .08)
+        }
+
+        .buy-opt {
+            background: var(--panel);
+            padding: 20px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-decoration: none;
+            color: var(--off)
+        }
+
+        .buy-opt:hover {
+            background: #141414;
+            color: var(--aqua)
+        }
+
+        .buy-opt .lbl {
+            font-size: 13px;
+            letter-spacing: 2px
+        }
+
+        .contact-line {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 11px;
+            letter-spacing: 2px;
+            color: var(--mute2);
+            direction: ltr
+        }
+
+        .contact-line a {
+            color: var(--mute);
+            text-decoration: none
+        }
+
+        .contact-line a:hover {
+            color: var(--aqua)
+        }
+
+        .trust-row {
+            display: flex;
+            justify-content: center;
+            gap: 26px;
+            margin-top: 34px;
+            flex-wrap: wrap
+        }
+
+        .trust-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            font-size: 10px;
+            letter-spacing: 1px;
+            color: var(--mute);
+            max-width: 100px;
+            text-align: center
+        }
+
+        .trust-item svg {
+            width: 22px;
+            height: 22px
+        }
+
+        .about-wrap {
+            max-width: 640px;
+            margin: 0 auto;
+            text-align: center
+        }
+
+        .about-wrap p {
+            color: var(--mute);
+            line-height: 1.9;
+            font-size: 15px
+        }
+
+        .about-wrap p+p {
+            margin-top: 18px
+        }
+
+        footer {
+            border-top: 1px solid rgba(255, 255, 255, .08);
+            padding: 40px 0
+        }
+
+        .foot-row {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 14px;
+            font-size: 11px;
+            letter-spacing: 1px;
+            color: var(--mute2)
+        }
+
+        .foot-row a {
+            color: var(--mute2);
+            text-decoration: none
+        }
+
+        .foot-row a:hover {
+            color: var(--aqua)
+        }
+
+        .announce {
+            background: #000;
+            color: var(--mute);
+            overflow: hidden;
+            white-space: nowrap;
+            border-bottom: 1px solid rgba(255, 255, 255, .08);
+            direction: ltr
+        }
+
+        .marquee-track {
+            display: inline-block;
+            padding: 9px 0 9px 100%;
+            animation: marquee 26s linear infinite;
+            font-size: 11px;
+            letter-spacing: 2px
+        }
+
+        .marquee-track span {
+            margin: 0 40px
+        }
+
+        @keyframes marquee {
+            from {
+                transform: translateX(0)
+            }
+
+            to {
+                transform: translateX(-100%)
+            }
+        }
+
+        @media(prefers-reduced-motion:reduce) {
+            .marquee-track {
+                animation: none;
+                padding-left: 12px
+            }
+        }
+
+        .grain {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            opacity: .035;
+            z-index: 1;
+            mix-blend-mode: overlay
+        }
+
+        .grain svg {
+            width: 100%;
+            height: 100%
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity .7s ease, transform .7s ease
+        }
+
+        .reveal.in {
+            opacity: 1;
+            transform: none
+        }
+
+        @media(prefers-reduced-motion:reduce) {
+            .reveal {
+                opacity: 1;
+                transform: none;
+                transition: none
+            }
+        }
+
+        .sizes {
+            display: flex;
+            gap: 6px;
+            margin-top: 2px;
+            direction: ltr
+        }
+
+        .size-opt {
+            border: 1px solid rgba(255, 255, 255, .3);
+            background: transparent;
+            color: var(--mute);
+            min-width: 36px;
+            height: 32px;
+            padding: 0 6px;
+            font-size: 11px;
+            cursor: pointer
+        }
+
+        .size-opt:hover,
+        .size-opt.active {
+            border-color: var(--aqua);
+            color: var(--aqua)
+        }
+
+        .size-opt.active {
+            background: rgba(45, 212, 191, .08)
+        }
+
+        .badge {
+            position: absolute;
+            top: 12px;
+            left: -8px;
+            background: var(--aqua);
+            color: #000;
+            font-family: 'Anton', 'Helvetica Neue', sans-serif;
+            font-size: 11px;
+            letter-spacing: 1px;
+            padding: 3px 12px;
+            transform: rotate(-6deg);
+            z-index: 2
+        }
+
+        .badge.new {
+            background: var(--off)
+        }
+
+        .newsletter {
+            border-top: 1px solid rgba(255, 255, 255, .08);
+            padding: 70px 24px;
+            text-align: center
+        }
+
+        .newsletter h3 {
+            font-weight: 400;
+            font-size: 24px;
+            letter-spacing: 1px;
+            font-family: 'Anton', 'Helvetica Neue', sans-serif;
+            margin: 0 0 12px
+        }
+
+        .newsletter p {
+            color: var(--mute);
+            font-size: 14px;
+            margin: 0 0 26px
+        }
+
+        .nform {
+            display: flex;
+            justify-content: center;
+            max-width: 380px;
+            margin: 0 auto;
+            direction: ltr
+        }
+
+        .nform input {
+            flex: 1;
+            min-width: 0;
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, .3);
+            border-right: none;
+            padding: 12px 14px;
+            color: var(--off);
+            font-size: 14px
+        }
+
+        .nform input:focus-visible {
+            outline: 2px solid var(--aqua)
+        }
+
+        .nform button {
+            background: var(--teal);
+            color: #fff;
+            border: none;
+            padding: 12px 18px;
+            font-size: 12px;
+            letter-spacing: 1px;
+            cursor: pointer
+        }
+
+        .nform button:hover {
+            background: var(--aqua);
+            color: #000
+        }
+
+        .n-msg {
+            font-size: 12px;
+            color: var(--aqua);
+            margin-top: 14px;
+            min-height: 16px
+        }
+
+        .overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, .6);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity .2s;
+            z-index: 90
+        }
+
+        .overlay.open {
+            opacity: 1;
+            pointer-events: auto
+        }
+
+        .drawer {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            inset-inline-end: -360px;
+            width: 340px;
+            max-width: 88vw;
+            background: #0a0a0a;
+            z-index: 95;
+            transition: inset-inline-end .25s ease;
+            display: flex;
+            flex-direction: column;
+            padding-top: calc(env(safe-area-inset-top, 0px) + 18px);
+            padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 18px);
+            border-inline-start: 1px solid rgba(255, 255, 255, .12)
+        }
+
+        .drawer.open {
+            inset-inline-end: 0
+        }
+
+        .drawer-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px 16px;
+            border-bottom: 1px solid rgba(255, 255, 255, .1)
+        }
+
+        .drawer-head h3 {
+            margin: 0;
+            font-weight: 400;
+            font-size: 15px;
+            letter-spacing: 3px
+        }
+
+        .drawer-head button {
+            background: none;
+            border: none;
+            font-size: 22px;
+            cursor: pointer;
+            color: var(--off)
+        }
+
+        .drawer-items {
+            flex: 1;
+            overflow-y: auto;
+            padding: 16px 20px
+        }
+
+        .d-item {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, .08);
+            font-size: 13px
+        }
+
+        .d-item button {
+            background: none;
+            border: none;
+            color: var(--aqua);
+            font-weight: 700;
+            cursor: pointer;
+            font-size: 16px;
+            padding: 0 6px
+        }
+
+        .drawer-foot {
+            padding: 16px 20px 0;
+            border-top: 1px solid rgba(255, 255, 255, .1)
+        }
+
+        .drawer-foot .total {
+            display: flex;
+            justify-content: space-between;
+            font-weight: 500;
+            font-size: 14px;
+            margin-bottom: 6px;
+            letter-spacing: 1px
+        }
+
+        .drawer-foot .note {
+            font-size: 11px;
+            color: var(--mute2);
+            margin-bottom: 14px
+        }
+
+        .checkout {
+            width: 100%;
+            background: var(--teal);
+            color: #fff;
+            border: none;
+            padding: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            letter-spacing: 2px;
+            font-size: 12px
+        }
+
+        .checkout:hover {
+            background: var(--aqua);
+            color: #000
+        }
+
+        .empty-msg {
+            font-size: 13px;
+            color: var(--mute2);
+            padding: 20px 0
+        }
+
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, .65);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity .2s;
+            z-index: 110;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            overflow-y: auto
+        }
+
+        .modal-overlay.open {
+            opacity: 1;
+            pointer-events: auto
+        }
+
+        .modal {
+            background: #0a0a0a;
+            border: 1px solid rgba(255, 255, 255, .12);
+            max-width: 400px;
+            width: 100%;
+            padding: 28px 24px;
+            margin: auto
+        }
+
+        .modal h3 {
+            margin: 0 0 6px;
+            font-family: 'Anton', 'Helvetica Neue', sans-serif;
+            font-size: 22px;
+            letter-spacing: 1px;
+            font-weight: 400
+        }
+
+        .modal p.sub {
+            color: var(--mute2);
+            font-size: 13px;
+            margin: 0 0 20px
+        }
+
+        .modal label {
+            display: block;
+            font-size: 11px;
+            letter-spacing: 1px;
+            color: var(--mute);
+            margin: 14px 0 6px
+        }
+
+        .modal input,
+        .modal textarea,
+        .modal select {
+            width: 100%;
+            background: #0a0a0a;
+            border: 1px solid rgba(255, 255, 255, .3);
+            color: var(--off);
+            padding: 11px 12px;
+            font-size: 14px;
+            font-family: inherit
+        }
+
+        .modal textarea {
+            resize: vertical;
+            min-height: 56px
+        }
+
+        .modal input:focus-visible,
+        .modal textarea:focus-visible {
+            outline: 2px solid var(--aqua)
+        }
+
+        .summary {
+            margin-top: 18px;
+            border-top: 1px solid rgba(255, 255, 255, .12);
+            padding-top: 12px;
+            font-size: 13px
+        }
+
+        .summary .row {
+            display: flex;
+            justify-content: space-between;
+            padding: 4px 0;
+            color: var(--mute)
+        }
+
+        .summary .row.big {
+            color: var(--off);
+            font-weight: 600;
+            font-size: 15px;
+            padding-top: 8px
+        }
+
+        .modal-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 22px
+        }
+
+        .modal-actions button {
+            flex: 1;
+            padding: 13px;
+            font-size: 12px;
+            letter-spacing: 1.5px;
+            cursor: pointer;
+            border: none
+        }
+
+        .m-cancel {
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, .3) !important;
+            color: var(--off)
+        }
+
+        .m-send {
+            background: var(--teal);
+            color: #fff;
+            font-weight: 500
+        }
+
+        .m-send:hover {
+            background: var(--aqua);
+            color: #000
+        }
+
+        .sticky-bar {
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(10, 10, 10, .95);
+            backdrop-filter: blur(6px);
+            border-top: 1px solid rgba(255, 255, 255, .1);
+            padding: 12px 20px calc(12px + env(safe-area-inset-bottom, 0px));
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 14px;
+            transform: translateY(120%);
+            transition: transform .3s ease;
+            z-index: 80
+        }
+
+        .sticky-bar.show {
+            transform: translateY(0)
+        }
+
+        .sticky-bar span {
+            font-size: 12px;
+            letter-spacing: 1px;
+            color: var(--mute)
+        }
+
+        .sticky-bar a {
+            background: var(--teal);
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 18px;
+            font-size: 11px;
+            letter-spacing: 1.5px;
+            white-space: nowrap
+        }
+
+        .sticky-bar a:hover {
+            background: var(--aqua);
+            color: #000
+        }
+
+        .toast {
+            position: fixed;
+            left: 50%;
+            bottom: calc(90px + env(safe-area-inset-bottom, 0px));
+            transform: translate(-50%, 20px);
+            background: #111;
+            border: 1px solid var(--aqua);
+            color: var(--off);
+            padding: 12px 20px;
+            font-size: 13px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity .25s, transform .25s;
+            z-index: 300;
+            max-width: 88vw;
+            text-align: center
+        }
+
+        .toast.show {
+            opacity: 1;
+            transform: translate(-50%, 0)
+        }
+
+        [dir="rtl"] body,
+        [dir="rtl"] button,
+        [dir="rtl"] input,
+        [dir="rtl"] select,
+        [dir="rtl"] textarea {
+            font-family: 'Cairo', 'Helvetica Neue', Tahoma, Arial, sans-serif
+        }
+
+        [dir="rtl"] .section-head h2,
+        [dir="rtl"] .newsletter h3,
+        [dir="rtl"] .modal h3 {
+            font-family: 'Cairo', sans-serif;
+            font-weight: 700;
+            letter-spacing: 0
+        }
+
+        [dir="rtl"] .badge {
+            left: auto;
+            right: -8px;
+            transform: rotate(6deg);
+            font-family: 'Cairo', sans-serif
+        }
+
+        [dir="rtl"] .eyebrow,
+        [dir="rtl"] .cd-label,
+        [dir="rtl"] .navlinks,
+        [dir="rtl"] .add-btn,
+        [dir="rtl"] .buy-opt .lbl,
+        [dir="rtl"] .trust-item,
+        [dir="rtl"] .cart-btn,
+        [dir="rtl"] .checkout,
+        [dir="rtl"] .hero-cta,
+        [dir="rtl"] .modal label,
+        [dir="rtl"] .mobile-menu a,
+        [dir="rtl"] .foot-row,
+        [dir="rtl"] .sticky-bar span,
+        [dir="rtl"] .sticky-bar a {
+            letter-spacing: 0 !important
+        }
+
+        [dir="rtl"] .nform input {
+            border-right: 1px solid rgba(255, 255, 255, .3);
+            border-left: none
+        }
+    </style>
+</head>
+
+<body class="gloss">
+
+    <div class="grain">
+        <svg>
+            <filter id="n">
+                <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch" />
+            </filter>
+            <rect width="100%" height="100%" filter="url(#n)" />
+        </svg>
+    </div>
+
+    <div class="announce">
+        <div class="marquee-track">
+            <span class="freeShip"></span>
+            <span>MADE IN EGYPT</span>
+            <span>CASH ON DELIVERY</span>
+            <span class="freeShip"></span>
+            <span>MADE IN EGYPT</span>
+            <span>CASH ON DELIVERY</span>
+        </div>
+    </div>
+
+    <header>
+        <nav>
+            <div class="brand">
+                <span class="brand-icon"><svg viewBox="0 0 100 100">
+                        <polyline points="15,72 35,42 50,62 70,25 85,50" fill="none" stroke="#2DD4BF" stroke-width="9"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg></span>
+                NILO
+            </div>
+            <div class="navlinks">
+                <a href="#collection">COLLECTION</a>
+                <a href="#about">STORY</a>
+                <a href="#buy">BUY</a>
+            </div>
+            <div style="display:flex;align-items:center;gap:10px;">
+                <button class="hamburger" id="langToggle"
+                    style="display:block;font-size:12px;letter-spacing:1px;">EN</button>
+                <button class="hamburger" id="hamburgerBtn" aria-label="Menu" aria-expanded="false">☰</button>
+                <button class="cart-btn" id="cartOpen"><span>BAG</span> (<span id="cartCount">0</span>)</button>
+            </div>
+        </nav>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#collection">COLLECTION</a>
+            <a href="#about">STORY</a>
+            <a href="#buy">BUY</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="eyebrow">EGYPT · SS26</div>
+        <h1>NILO</h1>
+        <p>Streetwear born on the Nile. Considered silhouettes, heavyweight fabric, and a quiet confidence built for the
+            street.</p>
+        <a href="#collection" class="hero-cta">SHOP THE COLLECTION</a>
+        <div class="countdown" id="countdown">
+            <div class="cd-unit"><span class="cd-num" id="cdDays">--</span><span class="cd-label">DAYS</span></div>
+            <div class="cd-unit"><span class="cd-num" id="cdHours">--</span><span class="cd-label">HOURS</span></div>
+            <div class="cd-unit"><span class="cd-num" id="cdMins">--</span><span class="cd-label">MINS</span></div>
+            <div class="cd-unit"><span class="cd-num" id="cdSecs">--</span><span class="cd-label">SECS</span></div>
+        </div>
+    </section>
+
+    <div class="wrap">
+
+        <section id="collection" class="reveal">
+            <div class="section-head">
+                <div class="eyebrow">SS26</div>
+                <h2>The Collection</h2>
+            </div>
+            <div style="text-align:center;margin:-30px 0 34px;">
+                <button type="button" id="sizeGuideBtn"
+                    style="background:none;border:none;color:var(--mute);font-size:12px;letter-spacing:1.5px;text-decoration:underline;cursor:pointer;font-family:inherit;">SIZE
+                    GUIDE</button>
+            </div>
+            <div class="grid" id="productGrid"></div>
+        </section>
+
+        <section id="about" class="reveal">
+            <div class="section-head">
+                <div class="eyebrow">WHO WE ARE</div>
+                <h2>The Story</h2>
+            </div>
+            <div class="about-wrap">
+                <p>NILO was built in Cairo, out of the belief that Egyptian streetwear deserves the same weight and
+                    craft as anything coming out of London or Tokyo.</p>
+                <p>Every piece takes its language from the river itself — movement, current, quiet force — translated
+                    into heavyweight fabric and considered cuts, cut for the street and built to last.</p>
+            </div>
+        </section>
+
+        <section id="faq" class="reveal">
+            <div class="section-head">
+                <div class="eyebrow">GOOD TO KNOW</div>
+                <h2>FAQ</h2>
+            </div>
+            <div class="faq-wrap" id="faqWrap">
+                <div class="faq-item">
+                    <button class="faq-q" type="button"><span>Is cash on delivery available?</span><span
+                            class="plus">+</span></button>
+                    <div class="faq-a">
+                        <p>Yes — pay in cash when your order arrives at your door, anywhere in Egypt.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q" type="button"><span>What is the fabric?</span><span
+                            class="plus">+</span></button>
+                    <div class="faq-a">
+                        <p>Cotton sponge fleece (melton) — heavyweight, with an oversized box fit.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q" type="button"><span>How much is shipping?</span><span
+                            class="plus">+</span></button>
+                    <div class="faq-a">
+                        <p id="faqShip"></p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q" type="button"><span>How long does delivery take?</span><span
+                            class="plus">+</span></button>
+                    <div class="faq-a">
+                        <p>2–4 business days in Cairo and Giza, and 3–6 business days for other governorates.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q" type="button"><span>Can I exchange my size?</span><span
+                            class="plus">+</span></button>
+                    <div class="faq-a">
+                        <p>Yes, within 7 days of delivery, as long as the piece is unworn with tags on. Message us on
+                            WhatsApp to arrange it.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q" type="button"><span>How do I place an order?</span><span
+                            class="plus">+</span></button>
+                    <div class="faq-a">
+                        <p>Pick a size, add it to your bag, then confirm your name, phone and address at checkout — your
+                            order is sent straight to us on WhatsApp.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="buy" class="reveal">
+            <div class="section-head">
+                <div class="eyebrow">GET IT</div>
+                <h2>Where To Buy</h2>
+            </div>
+            <div class="buy-panel">
+                <p>NILO is sold in limited quantities each drop. Add pieces to your bag, then confirm directly with our
+                    team — every order is verified before dispatch.</p>
+                <div class="buy-options">
+                    <a href="#collection" class="buy-opt"><span class="lbl">SHOP THE COLLECTION</span><span>↑</span></a>
+                    <a href="https://www.instagram.com/nilo_wear.eg" target="_blank" rel="noopener"
+                        class="buy-opt"><span class="lbl">MESSAGE US ON INSTAGRAM</span><span>↗</span></a>
+                    <a href="https://wa.me/201064631849" target="_blank" rel="noopener" class="buy-opt"><span
+                            class="lbl">WHATSAPP ORDERS</span><span>↗</span></a>
+                </div>
+                <div class="contact-line">HELLO@NILO.EG · <a href="mailto:hello@nilo.eg">EMAIL US</a></div>
+                <div class="trust-row">
+                    <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="#2DD4BF" stroke-width="2">
+                            <rect x="2" y="6" width="20" height="12" rx="2" />
+                            <path d="M2 10h20" />
+                        </svg>CASH ON DELIVERY</div>
+                    <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="#2DD4BF" stroke-width="2">
+                            <path d="M4 12l4 4L20 4" />
+                        </svg>ORIGINAL QUALITY</div>
+                    <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="#2DD4BF" stroke-width="2">
+                            <path d="M17 3l4 4-4 4M7 21l-4-4 4-4M3 7h13a4 4 0 0 1 4 4M21 17H8a4 4 0 0 1-4-4" />
+                        </svg>EASY EXCHANGE</div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <div class="newsletter">
+        <h3>Never Miss A Drop</h3>
+        <p>Pieces sell out fast. Get notified the second NILO restocks or drops something new.</p>
+        <form class="nform" id="nform">
+            <input type="email" id="nemail" placeholder="your@email.com" required aria-label="Email address">
+            <button type="submit">JOIN</button>
+        </form>
+        <div class="n-msg" id="nmsg"></div>
+    </div>
+
+    <footer>
+        <div class="wrap foot-row">
+            <span>© 2026 NILO — MADE IN EGYPT</span>
+            <a href="https://www.instagram.com/nilo_wear.eg" target="_blank" rel="noopener">INSTAGRAM</a>
+            <a href="https://wa.me/201064631849" target="_blank" rel="noopener">WHATSAPP</a>
+            <a href="mailto:hello@nilo.eg">CONTACT</a>
+        </div>
+    </footer>
+
+    <div class="overlay" id="overlay"></div>
+
+    <aside class="drawer" id="drawer">
+        <div class="drawer-head">
+            <h3>BAG</h3>
+            <button id="cartClose" aria-label="Close">×</button>
+        </div>
+        <div class="drawer-items" id="drawerItems"></div>
+        <div class="drawer-foot">
+            <div class="total"><span>SUBTOTAL</span><span id="cartTotal"></span></div>
+            <div class="note">Shipping is calculated at checkout.</div>
+            <button class="checkout" id="checkoutBtn">CHECKOUT</button>
+        </div>
+    </aside>
+
+    <div class="modal-overlay" id="sizeGuideOverlay">
+        <div class="modal">
+            <h3>Size Guide</h3>
+            <p class="sub">Hoodie Box — measurements in cm</p>
+            <table style="width:100%;border-collapse:collapse;font-size:13px;color:#ddd;">
+                <tr style="border-bottom:1px solid rgba(255,255,255,0.15);">
+                    <th style="text-align:start;padding:8px 4px;color:#a0a0a0;font-size:11px;">SIZE</th>
+                    <th style="text-align:start;padding:8px 4px;color:#a0a0a0;font-size:11px;">CHEST</th>
+                    <th style="text-align:start;padding:8px 4px;color:#a0a0a0;font-size:11px;">LENGTH</th>
+                    <th style="text-align:start;padding:8px 4px;color:#a0a0a0;font-size:11px;">SLEEVE</th>
+                </tr>
+                <tr style="border-bottom:1px solid rgba(255,255,255,0.08);">
+                    <td style="padding:8px 4px;">L</td>
+                    <td style="padding:8px 4px;">58</td>
+                    <td style="padding:8px 4px;">70</td>
+                    <td style="padding:8px 4px;">62</td>
+                </tr>
+                <tr style="border-bottom:1px solid rgba(255,255,255,0.08);">
+                    <td style="padding:8px 4px;">XL</td>
+                    <td style="padding:8px 4px;">61</td>
+                    <td style="padding:8px 4px;">72</td>
+                    <td style="padding:8px 4px;">64</td>
+                </tr>
+                <tr>
+                    <td style="padding:8px 4px;">XXL</td>
+                    <td style="padding:8px 4px;">64</td>
+                    <td style="padding:8px 4px;">74</td>
+                    <td style="padding:8px 4px;">66</td>
+                </tr>
+            </table>
+            <div class="modal-actions"><button type="button" class="m-cancel" id="sizeGuideClose">CLOSE</button></div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal">
+            <h3>Complete Your Order</h3>
+            <p class="sub">We'll confirm everything with you on WhatsApp.</p>
+            <form id="checkoutForm">
+                <label for="custName">FULL NAME</label>
+                <input type="text" id="custName" required autocomplete="name">
+                <label for="custPhone">PHONE NUMBER</label>
+                <input type="tel" id="custPhone" required autocomplete="tel" inputmode="tel"
+                    pattern="(\+?20|0)?1[0125][0-9]{8}" maxlength="14">
+                <label for="custRegion">REGION</label>
+                <select id="custRegion" required></select>
+                <label for="custAddress">DELIVERY ADDRESS</label>
+                <textarea id="custAddress" required autocomplete="street-address"></textarea>
+                <div class="summary" id="orderSummary"></div>
+                <div class="modal-actions">
+                    <button type="button" class="m-cancel" id="modalCancel">CANCEL</button>
+                    <button type="submit" class="m-send">SEND VIA WHATSAPP</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="sticky-bar" id="stickyBar">
+        <span id="stickyText"></span>
+        <a href="#collection">SHOP NOW</a>
+    </div>
+
+    <div class="toast" id="toast" role="status"></div>
+
+    <script>
+        /* ===== SETTINGS — edit here ===== */
+        const CONFIG = {
+            WHATSAPP: '201064631849',
+            EMAIL: 'hello@nilo.eg',
+            SHIPPING: { cairo: 100, lower: 100, upper: 130 }, // cairo = Cairo & Giza
+            FREE_CAIRO_MIN: 1500,        // free shipping in Cairo & Giza above this subtotal
+            NEWSLETTER_ENDPOINT: '',     // e.g. 'https://formspree.io/f/xxxxxxx' — if empty, a pre-filled email opens instead
+            DROP_DATE: null              // e.g. new Date('2026-12-01T18:00:00+02:00') — countdown shows only if set
+        };
+
+        const products = [
+            { id: 1, name: 'HOODIE BOX — BLACK', price: 800, image: 'images/black.jpg', badge: 'LIMITED' },
+            { id: 2, name: 'HOODIE BOX — OLIVE', price: 800, image: 'images/olive.jpg', badge: 'NEW' },
+            { id: 3, name: 'HOODIE BOX — BURGUNDY', price: 800, image: 'images/burgundy.jpg' }
+        ];
+
+        const REGIONS = [
+            { id: 'cairo', label: 'CAIRO & GIZA' },
+            { id: 'lower', label: 'LOWER EGYPT' },
+            { id: 'upper', label: 'UPPER EGYPT' }
+        ];
+
+        /* ===== language ===== */
+        const AR = {
+            'MADE IN EGYPT': 'صنع في مصر',
+            'CASH ON DELIVERY': 'الدفع عند الاستلام',
+            'COLLECTION': 'الكولكشن', 'STORY': 'قصتنا', 'BUY': 'اشتري', 'BAG': 'الشنطة',
+            'EGYPT · SS26': 'مصر · SS26',
+            'Streetwear born on the Nile. Considered silhouettes, heavyweight fabric, and a quiet confidence built for the street.': 'ستريت وير اتولد على النيل. قصّات مدروسة، خامة تقيلة، وثقة هادية معمولة للشارع.',
+            'SHOP THE COLLECTION': 'تسوق الكولكشن',
+            'DAYS': 'يوم', 'HOURS': 'ساعة', 'MINS': 'دقيقة', 'SECS': 'ثانية',
+            'The Collection': 'الكولكشن', 'SIZE GUIDE': 'جدول المقاسات',
+            'WHO WE ARE': 'مين احنا', 'The Story': 'قصتنا',
+            'NILO was built in Cairo, out of the belief that Egyptian streetwear deserves the same weight and craft as anything coming out of London or Tokyo.': 'نيلو اتبنى في القاهرة من إيمانه إن الستريت وير المصري يستاهل نفس القيمة والصنعة بتاعة أي حاجة طالعة من لندن أو طوكيو.',
+            'Every piece takes its language from the river itself — movement, current, quiet force — translated into heavyweight fabric and considered cuts, cut for the street and built to last.': 'كل قطعة بتاخد لغتها من النهر نفسه — حركة، تيار، وقوة هادية — متترجمة لخامة تقيلة وقصّات مدروسة، معمولة للشارع وتعيش كتير.',
+            'GOOD TO KNOW': 'كويس تعرف', 'FAQ': 'أسئلة شائعة',
+            'Is cash on delivery available?': 'الدفع عند الاستلام متاح؟',
+            'Yes — pay in cash when your order arrives at your door, anywhere in Egypt.': 'أيوه — بتدفع كاش لما الأوردر يوصلك لحد باب البيت في أي مكان في مصر.',
+            'How much is shipping?': 'الشحن بكام؟',
+            'What is the fabric?': 'الخامة إيه؟',
+            'Cotton sponge fleece (melton) — heavyweight, with an oversized box fit.': 'ملتن اسفنجي قطن — خامة تقيلة وقصّة بوكس أوفر سايز.',
+            'How long does delivery take?': 'التوصيل بياخد قد إيه؟',
+            '2–4 business days in Cairo and Giza, and 3–6 business days for other governorates.': 'من ٢ لـ ٤ أيام عمل في القاهرة والجيزة، ومن ٣ لـ ٦ أيام عمل في باقي المحافظات.',
+            'Can I exchange my size?': 'أقدر أستبدل المقاس؟',
+            'Yes, within 7 days of delivery, as long as the piece is unworn with tags on. Message us on WhatsApp to arrange it.': 'أيوه، خلال ٧ أيام من الاستلام، بشرط القطعة تكون متلبستش والتاجات عليها. كلمنا على واتساب ونظبطها.',
+            'How do I place an order?': 'أطلب إزاي؟',
+            'Pick a size, add it to your bag, then confirm your name, phone and address at checkout — your order is sent straight to us on WhatsApp.': 'اختار المقاس، ضيف للشنطة، وبعدين اكتب اسمك ورقمك وعنوانك — والأوردر بيوصلنا على واتساب على طول.',
+            'GET IT': 'اطلبه', 'Where To Buy': 'تشتري منين',
+            'NILO is sold in limited quantities each drop. Add pieces to your bag, then confirm directly with our team — every order is verified before dispatch.': 'نيلو بيتباع بكميات محدودة في كل دروب. ضيف القطع للشنطة وأكد مع الفريق مباشرة — كل أوردر بيتراجع قبل الشحن.',
+            'MESSAGE US ON INSTAGRAM': 'كلمنا على إنستجرام',
+            'WHATSAPP ORDERS': 'أوردرات واتساب',
+            'EMAIL US': 'ابعتلنا إيميل',
+            'ORIGINAL QUALITY': 'جودة أصلية', 'EASY EXCHANGE': 'استبدال سهل',
+            'Never Miss A Drop': 'متفوتش أي دروب',
+            'Pieces sell out fast. Get notified the second NILO restocks or drops something new.': 'القطع بتخلص بسرعة. اعرف في نفس اللحظة لما نيلو يرجّع أو ينزل حاجة جديدة.',
+            'JOIN': 'اشترك',
+            '© 2026 NILO — MADE IN EGYPT': '© 2026 نيلو — صنع في مصر',
+            'INSTAGRAM': 'إنستجرام', 'WHATSAPP': 'واتساب', 'CONTACT': 'تواصل',
+            'SUBTOTAL': 'المجموع', 'TOTAL': 'الإجمالي', 'SHIPPING': 'الشحن', 'FREE': 'مجاني',
+            'Shipping is calculated at checkout.': 'الشحن بيتحسب عند إتمام الطلب.',
+            'CHECKOUT': 'إتمام الطلب',
+            'Size Guide': 'جدول المقاسات',
+            'Hoodie Box — measurements in cm': 'هودي بوكس — القياسات بالسنتيمتر',
+            'SIZE': 'المقاس', 'CHEST': 'الصدر', 'LENGTH': 'الطول', 'SLEEVE': 'الكم', 'CLOSE': 'إغلاق',
+            'Complete Your Order': 'كمّل طلبك',
+            "We'll confirm everything with you on WhatsApp.": 'هنأكد معاك كل حاجة على واتساب.',
+            'FULL NAME': 'الاسم بالكامل', 'PHONE NUMBER': 'رقم التليفون',
+            'REGION': 'المنطقة', 'SELECT REGION': 'اختار المنطقة',
+            'CAIRO & GIZA': 'القاهرة والجيزة', 'LOWER EGYPT': 'وجه بحري', 'UPPER EGYPT': 'وجه قبلي',
+            'DELIVERY ADDRESS': 'عنوان التوصيل',
+            'CANCEL': 'إلغاء', 'SEND VIA WHATSAPP': 'ابعت على واتساب',
+            'SHOP NOW': 'تسوق دلوقتي',
+            'ADD TO BAG': 'ضيف للشنطة', 'LIMITED': 'كمية محدودة', 'NEW': 'جديد',
+            'COTTON SPONGE FLEECE · OVERSIZED FIT': 'ملتن اسفنجي قطن · قصّة أوفر سايز',
+            'HOODIE BOX — BLACK': 'هودي بوكس — أسود',
+            'HOODIE BOX — OLIVE': 'هودي بوكس — زيتي',
+            'HOODIE BOX — BURGUNDY': 'هودي بوكس — بوردو',
+            'Your bag is empty.': 'الشنطة فاضية.',
+            'Please select a size first.': 'اختار المقاس الأول.',
+            'Please select your region.': 'اختار المنطقة الأول.',
+            'Added to your bag.': 'اتضاف للشنطة.',
+            "You're on the list. See you at the next drop.": 'اتسجلت في القايمة. نشوفك في الدروب الجاي.',
+            'Something went wrong. Please try again.': 'حصلت مشكلة. جرّب تاني.'
+        };
+
+        let lang = 'ar';
+        try { lang = localStorage.getItem('nilo_lang') || 'ar'; } catch (e) { }
+
+        const tr = s => (lang === 'ar' && AR[s]) ? AR[s] : s;
+        const money = n => lang === 'ar' ? n + ' جنيه' : n + ' EGP';
+
+        /* ===== state ===== */
+        let cart = [];
+        try { cart = JSON.parse(localStorage.getItem('nilo_cart') || '[]'); } catch (e) { cart = []; }
+        const selectedSizes = {};
+
+        function showToast(msg) {
+            const t = document.getElementById('toast');
+            t.textContent = msg;
+            t.classList.add('show');
+            clearTimeout(showToast._t);
+            showToast._t = setTimeout(() => t.classList.remove('show'), 2400);
+        }
+
+        /* ===== products ===== */
+        function renderProducts() {
+            const sizeList = ['L', 'XL', 'XXL'];
+            document.getElementById('productGrid').innerHTML = products.map(p => `
+    <div class="card">
+      <div class="card-art">
+        ${p.badge ? `<span class="badge${p.badge === 'NEW' ? ' new' : ''}">${tr(p.badge)}</span>` : ''}
+        <img src="${p.image}" alt="${tr(p.name)}" loading="lazy">
+      </div>
+      <div class="card-body">
+        <h3>${tr(p.name)}</h3>
+        <span class="meta">${tr('COTTON SPONGE FLEECE · OVERSIZED FIT')}</span>
+        <span class="price">${money(p.price)}</span>
+        <div class="sizes">
+          ${sizeList.map(s => `<button type="button" class="size-opt${selectedSizes[p.id] === s ? ' active' : ''}" onclick="selectSize(${p.id},'${s}',this)">${s}</button>`).join('')}
+        </div>
+        <button class="add-btn" onclick="addToCart(${p.id})">${tr('ADD TO BAG')}</button>
+      </div>
+    </div>`).join('');
+        }
+
+        function selectSize(id, size, btn) {
+            selectedSizes[id] = size;
+            btn.parentElement.querySelectorAll('.size-opt').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+        }
+
+        function addToCart(id) {
+            const size = selectedSizes[id];
+            if (!size) { showToast(tr('Please select a size first.')); return; }
+            const ex = cart.find(i => i.id === id && i.size === size);
+            if (ex) ex.qty++; else cart.push({ id, size, qty: 1 });
+            saveCart();
+            openDrawer();
+        }
+
+        function changeQty(id, size, d) {
+            const it = cart.find(i => i.id === id && i.size === size);
+            if (!it) return;
+            it.qty += d;
+            if (it.qty <= 0) cart = cart.filter(i => !(i.id === id && i.size === size));
+            saveCart();
+        }
+
+        function saveCart() {
+            try { localStorage.setItem('nilo_cart', JSON.stringify(cart)); } catch (e) { }
+            renderCart();
+        }
+
+        function subtotal() {
+            return cart.reduce((s, i) => {
+                const p = products.find(pp => pp.id === i.id);
+                return s + (p ? p.price * i.qty : 0);
+            }, 0);
+        }
+
+        function shippingFor(region, sub) {
+            if (!region) return null;
+            if (region === 'cairo' && sub >= CONFIG.FREE_CAIRO_MIN) return 0;
+            return CONFIG.SHIPPING[region];
+        }
+
+        function renderCart() {
+            document.getElementById('cartCount').textContent = cart.reduce((s, i) => s + i.qty, 0);
+            const box = document.getElementById('drawerItems');
+            box.innerHTML = cart.length === 0
+                ? `<p class="empty-msg">${tr('Your bag is empty.')}</p>`
+                : cart.map(i => {
+                    const p = products.find(pp => pp.id === i.id);
+                    return `<div class="d-item">
+          <span>${tr(p.name)} (${i.size}) × ${i.qty}</span>
+          <span style="direction:ltr;white-space:nowrap">
+            <button onclick="changeQty(${p.id},'${i.size}',-1)" aria-label="-">−</button>
+            <button onclick="changeQty(${p.id},'${i.size}',1)" aria-label="+">+</button>
+          </span></div>`;
+                }).join('');
+            document.getElementById('cartTotal').textContent = money(subtotal());
+        }
+
+        function openDrawer() {
+            document.getElementById('drawer').classList.add('open');
+            document.getElementById('overlay').classList.add('open');
+        }
+        function closeDrawer() {
+            document.getElementById('drawer').classList.remove('open');
+            document.getElementById('overlay').classList.remove('open');
+        }
+
+        /* ===== checkout ===== */
+        function renderRegions() {
+            const sel = document.getElementById('custRegion');
+            const cur = sel.value;
+            sel.innerHTML = `<option value="">${tr('SELECT REGION')}</option>` +
+                REGIONS.map(r => `<option value="${r.id}">${tr(r.label)} — ${money(CONFIG.SHIPPING[r.id])}</option>`).join('');
+            sel.value = cur;
+        }
+
+        function updateSummary() {
+            const sub = subtotal();
+            const region = document.getElementById('custRegion').value;
+            const ship = shippingFor(region, sub);
+            const shipTxt = ship === null ? '—' : (ship === 0 ? tr('FREE') : money(ship));
+            const total = sub + (ship || 0);
+            document.getElementById('orderSummary').innerHTML = `
+    <div class="row"><span>${tr('SUBTOTAL')}</span><span>${money(sub)}</span></div>
+    <div class="row"><span>${tr('SHIPPING')}</span><span>${shipTxt}</span></div>
+    <div class="row big"><span>${tr('TOTAL')}</span><span>${money(total)}</span></div>`;
+        }
+
+        document.getElementById('custRegion').addEventListener('change', updateSummary);
+
+        document.getElementById('checkoutBtn').addEventListener('click', () => {
+            if (cart.length === 0) { showToast(tr('Your bag is empty.')); return; }
+            updateSummary();
+            document.getElementById('modalOverlay').classList.add('open');
+        });
+
+        document.getElementById('modalCancel').addEventListener('click', () =>
+            document.getElementById('modalOverlay').classList.remove('open'));
+
+        document.getElementById('checkoutForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('custName').value.trim();
+            const phone = document.getElementById('custPhone').value.trim();
+            const address = document.getElementById('custAddress').value.trim();
+            const regionId = document.getElementById('custRegion').value;
+            if (!regionId) { showToast(tr('Please select your region.')); return; }
+
+            const sub = subtotal();
+            const ship = shippingFor(regionId, sub);
+            const regionLabel = REGIONS.find(r => r.id === regionId).label;
+            const lines = cart.map(i => {
+                const p = products.find(pp => pp.id === i.id);
+                return `${p.name} (${i.size}) x${i.qty} — ${p.price * i.qty} EGP`;
+            });
+
+            const msg = `NEW ORDER — NILO\n\nCustomer: ${name}\nPhone: ${phone}\nRegion: ${regionLabel}\nAddress: ${address}\n\nItems:\n${lines.join('\n')}\n\nSubtotal: ${sub} EGP\nShipping: ${ship === 0 ? 'FREE' : ship + ' EGP'}\nTotal: ${sub + ship} EGP`;
+
+            const waUrl = `https://wa.me/${CONFIG.WHATSAPP}?text=${encodeURIComponent(msg)}`;
+            const w = window.open(waUrl, '_blank');
+            if (!w) window.location.href = waUrl;
+
+            document.getElementById('modalOverlay').classList.remove('open');
+            document.getElementById('checkoutForm').reset();
+            cart = [];
+            saveCart();
+            closeDrawer();
+        });
+
+        document.getElementById('cartOpen').addEventListener('click', openDrawer);
+        document.getElementById('cartClose').addEventListener('click', closeDrawer);
+        document.getElementById('overlay').addEventListener('click', closeDrawer);
+
+        /* ===== newsletter ===== */
+        document.getElementById('nform').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const email = document.getElementById('nemail').value.trim();
+            const msg = document.getElementById('nmsg');
+            if (CONFIG.NEWSLETTER_ENDPOINT) {
+                try {
+                    const r = await fetch(CONFIG.NEWSLETTER_ENDPOINT, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                        body: JSON.stringify({ email })
+                    });
+                    if (!r.ok) throw new Error('bad');
+                    msg.textContent = tr("You're on the list. See you at the next drop.");
+                    e.target.reset();
+                } catch (err) {
+                    msg.textContent = tr('Something went wrong. Please try again.');
+                }
+            } else {
+                const subj = encodeURIComponent('NILO — Drop alerts');
+                const body = encodeURIComponent('Please add me to the NILO drop list: ' + email);
+                window.location.href = `mailto:${CONFIG.EMAIL}?subject=${subj}&body=${body}`;
+                msg.textContent = tr("You're on the list. See you at the next drop.");
+                e.target.reset();
+            }
+        });
+
+        /* ===== misc UI ===== */
+        if ('IntersectionObserver' in window) {
+            const io = new IntersectionObserver((entries) => {
+                entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+            }, { threshold: 0.15 });
+            document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+        } else {
+            document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
+        }
+
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        hamburgerBtn.addEventListener('click', () => {
+            const open = mobileMenu.classList.toggle('open');
+            hamburgerBtn.setAttribute('aria-expanded', open);
+            hamburgerBtn.textContent = open ? '×' : '☰';
+        });
+        mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+            mobileMenu.classList.remove('open');
+            hamburgerBtn.setAttribute('aria-expanded', false);
+            hamburgerBtn.textContent = '☰';
+        }));
+
+        const stickyBar = document.getElementById('stickyBar');
+        const collectionEl = document.getElementById('collection');
+        const buyEl = document.getElementById('buy');
+        window.addEventListener('scroll', () => {
+            const past = collectionEl.getBoundingClientRect().top < 0;
+            const reachedBuy = buyEl.getBoundingClientRect().top < window.innerHeight;
+            stickyBar.classList.toggle('show', past && !reachedBuy);
+        }, { passive: true });
+
+        /* countdown: only shown when CONFIG.DROP_DATE is set */
+        function tickCountdown() {
+            const box = document.getElementById('countdown');
+            if (!CONFIG.DROP_DATE) { box.classList.remove('on'); return; }
+            box.classList.add('on');
+            let diff = Math.max(0, CONFIG.DROP_DATE - new Date());
+            const d = Math.floor(diff / 86400000); diff -= d * 86400000;
+            const h = Math.floor(diff / 3600000); diff -= h * 3600000;
+            const m = Math.floor(diff / 60000); diff -= m * 60000;
+            const s = Math.floor(diff / 1000);
+            const pad = n => String(n).padStart(2, '0');
+            document.getElementById('cdDays').textContent = pad(d);
+            document.getElementById('cdHours').textContent = pad(h);
+            document.getElementById('cdMins').textContent = pad(m);
+            document.getElementById('cdSecs').textContent = pad(s);
+        }
+        tickCountdown();
+        if (CONFIG.DROP_DATE) setInterval(tickCountdown, 1000);
+
+        const sgo = document.getElementById('sizeGuideOverlay');
+        document.getElementById('sizeGuideBtn').addEventListener('click', () => sgo.classList.add('open'));
+        document.getElementById('sizeGuideClose').addEventListener('click', () => sgo.classList.remove('open'));
+        sgo.addEventListener('click', e => { if (e.target === sgo) sgo.classList.remove('open'); });
+
+        document.querySelectorAll('.faq-q').forEach(btn =>
+            btn.addEventListener('click', () => btn.parentElement.classList.toggle('open')));
+
+        /* ===== apply language ===== */
+        const origText = new WeakMap();
+
+        function applyLang() {
+            document.documentElement.lang = lang;
+            document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+
+            renderProducts();
+            renderCart();
+            renderRegions();
+            updateSummary();
+
+            const c = CONFIG.SHIPPING;
+            document.getElementById('faqShip').textContent = lang === 'ar'
+                ? `القاهرة والجيزة: ${c.cairo} جنيه (مجاني للطلبات فوق ${CONFIG.FREE_CAIRO_MIN} جنيه). وجه بحري: ${c.lower} جنيه. وجه قبلي: ${c.upper} جنيه.`
+                : `Cairo & Giza: ${c.cairo} EGP (free on orders over ${CONFIG.FREE_CAIRO_MIN} EGP). Lower Egypt: ${c.lower} EGP. Upper Egypt: ${c.upper} EGP.`;
+
+            const minPrice = Math.min(...products.map(p => p.price));
+            document.getElementById('stickyText').textContent = lang === 'ar'
+                ? `نيلو هودي بوكس — بداية من ${minPrice} جنيه`
+                : `NILO HOODIE BOX — FROM ${minPrice} EGP`;
+            document.querySelectorAll('.freeShip').forEach(el => {
+                el.textContent = lang === 'ar'
+                    ? `شحن مجاني في القاهرة والجيزة للطلبات فوق ${CONFIG.FREE_CAIRO_MIN} جنيه`
+                    : `FREE DELIVERY IN CAIRO & GIZA ON ORDERS OVER ${CONFIG.FREE_CAIRO_MIN} EGP`;
+            });
+            document.getElementById('custPhone').title = lang === 'ar' ? 'رقم موبايل مصري، مثال: 01012345678' : 'Egyptian mobile number, e.g. 01012345678';
+
+            const dynamic = ['productGrid', 'drawerItems', 'orderSummary', 'custRegion', 'faqShip', 'toast', 'stickyText'];
+            const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+            let n;
+            while ((n = walker.nextNode())) {
+                const el = n.parentElement;
+                if (!el || el.closest('script,style,.freeShip') || dynamic.some(id => el.closest('#' + id))) continue;
+                if (!origText.has(n)) {
+                    const t = n.nodeValue.trim();
+                    if (!t) continue;
+                    origText.set(n, { raw: n.nodeValue, key: t.replace(/\s+/g, ' ') });
+                }
+                const o = origText.get(n);
+                if (!o) continue;
+                n.nodeValue = (lang === 'ar' && AR[o.key]) ? o.raw.replace(o.raw.trim(), AR[o.key]) : o.raw;
+            }
+
+            document.getElementById('nemail').placeholder = lang === 'ar' ? 'ايميلك' : 'your@email.com';
+            document.getElementById('langToggle').textContent = lang === 'ar' ? 'EN' : 'عربي';
+        }
+
+        document.getElementById('langToggle').addEventListener('click', () => {
+            lang = lang === 'ar' ? 'en' : 'ar';
+            try { localStorage.setItem('nilo_lang', lang); } catch (e) { }
+            applyLang();
+        });
+
+        const toLatin = v => v.replace(/[٠-٩]/g, d => '٠١٢٣٤٥٦٧٨٩'.indexOf(d));
+        document.getElementById('custPhone').addEventListener('input', e => { e.target.value = toLatin(e.target.value); });
+
+        document.addEventListener('keydown', e => {
+            if (e.key !== 'Escape') return;
+            closeDrawer();
+            document.getElementById('modalOverlay').classList.remove('open');
+            sgo.classList.remove('open');
+        });
+
+        applyLang();
+    </script>
+</body>
+
+</html>
